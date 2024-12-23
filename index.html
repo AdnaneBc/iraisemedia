@@ -12,6 +12,9 @@
     />
     <link rel="stylesheet" href="index.css" />
     <title>Document</title>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    </script>
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -159,4 +162,16 @@
       </div>
     </section>
   </footer>
+  <script>
+    const button = document.querySelector(".twitter-share-button");
+    button.addEventListener("click", function () {
+      datalayer.push({
+        event: "twitterShare",
+        eventCategory: "Social",
+        eventAction: "Share",
+        eventLabel: "Twitter",
+      });
+      console.log("datalayer", datalayer);
+    });
+  </script>
 </html>
